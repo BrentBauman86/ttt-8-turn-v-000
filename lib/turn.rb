@@ -61,7 +61,7 @@ end
 
   gets input_to_index(" ")
 if vaild_move?(board, index)
-   gets (board, index)
+    (board, index)
 else turn(board)
   puts "Please re-enter 1-9:"
 end
