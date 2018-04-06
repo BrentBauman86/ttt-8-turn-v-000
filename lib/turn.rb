@@ -12,6 +12,7 @@ def input_to_index(string)
   end
 
 def valid_move?(board, index)
+<<<<<<< HEAD
    position_taken?(board, index) || !index.between?(0, 8) ?  false :  true
     #  return false
     #    elsif !index.between?(0, 8)
@@ -19,6 +20,15 @@ def valid_move?(board, index)
     #    else
     #  return true
     #  end
+=======
+  if position_taken?(board, index)
+      return false
+        elsif !index.between?(0, 8)
+      return false
+        else
+      return true
+    end
+>>>>>>> b6c50edd02c669bbfa02174fc1b25f3ea046f8df
 end
 
 def move(board, index, character = "X")
@@ -35,6 +45,7 @@ if board[index] == "" || board[index] == " " || board[index] == nil
 
 def turn(board)
   puts "Please enter 1-9:"
+<<<<<<< HEAD
   input = gets
   index = input_to_index(input)
 
@@ -47,3 +58,12 @@ def turn(board)
 
    end
 end
+=======
+  gets input_to_index(" ")
+if vaild_move?(board, index)
+   gets (board, index)
+else turn(board)
+  puts "Please re-enter 1-9:"
+end
+    end
+>>>>>>> b6c50edd02c669bbfa02174fc1b25f3ea046f8df
